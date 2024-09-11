@@ -91,7 +91,7 @@ int main(){
 
                         if (i == 8 ){
                             scanf("%s", argument);
-                            unsetenv(argument);
+                            unsetenv(argument); //error checking??
                             break;
                         }
 
