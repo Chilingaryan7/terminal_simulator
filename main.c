@@ -31,9 +31,10 @@ int main(){
         while (1){
             fputs(user_name, stdout);
             putchar('>');
-            scanf("%s", command); //restrict the lenght of the input or use fgets, because may leed to buffer overflow if command is too long
-            strcpy(history[command_count++],command); //undefined behaviour if the input command is longer than COMMAND_SIZE, use strncpy
-
+            scanf("%31s", command); 
+            strncpy(history[command_count],command, COMMAND_SIZE);
+            history[command_count++][COMMAND_SIZE - 1] = '\0';
+                
             history = (char **) realloc (history,sizeof(char *) * command_count + 1);
             assert(history != NULL);
 
