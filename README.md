@@ -9,22 +9,6 @@ This is a simple terminal program implemented in C. It allows users to execute b
 - Set and unset environment variables.
 - Change the user prompt.
 
-## Compilation
-
-To compile the program, simply run the following `make` command:
-
-```bash
-make
-
-
-This will create an executable named terminal.
-
-Usage
-
-Once compiled, you can run the terminal by executing:
-
-./terminal
-
 Available Commands
 	1.	cd [directory] - Change the current working directory.
 	2.	exit - Exit the terminal program.
@@ -36,12 +20,19 @@ Available Commands
 	8.	setenv [VAR=value] - Set an environment variable.
 	9.	unsetenv [VAR] - Unset an environment variable.
 	10.	chprompt - Change the user prompt.
+ 
+ 
+## Compilation
 
-Clean up
+To compile the program, simply run the following `make` command:
 
-To clean up the compiled files, use the following command:
+```bash
+
+make
+
+./terminal
+
+make clean
 
 
-License
 
-This project is open source and available under the MIT License.
